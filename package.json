@@ -42,7 +42,7 @@
   ],
   "husky": {
     "hooks": {
-      "pre-commit": "prettier --write \"src/index.js\" && yarn lint"
+      "pre-commit": "prettier --write \"src/index.js\" && npm run lint"
     }
   },
   "dependencies": {}
