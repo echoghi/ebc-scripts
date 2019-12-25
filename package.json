@@ -1,10 +1,10 @@
 {
   "name": "ebc-scripts",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "random helper functions",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint .",
+    "lint": "eslint src/*.js",
     "test": "jest --no-cache",
     "test:watch": "jest --watch --no-cache",
     "report": "jest --coverage",
