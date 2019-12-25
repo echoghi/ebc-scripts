@@ -1,6 +1,6 @@
 {
   "name": "ebc-scripts",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "random helper functions",
   "main": "src/index.js",
   "scripts": {
