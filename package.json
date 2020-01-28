@@ -1,53 +1,62 @@
 {
-  "name": "ebc-scripts",
-  "version": "0.0.9",
-  "description": "random helper functions",
-  "main": "dist/index.js",
-  "scripts": {
-    "lint": "eslint src/*.js",
-    "test": "jest --no-cache",
-    "test:watch": "jest --watch --no-cache",
-    "report": "jest --coverage",
-    "build": "webpack",
-    "semantic-release": "semantic-release"
-  },
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/echoghi/ebc-scripts.git"
-  },
-  "author": "Emile Choghi <emchoghi@gmail.com> (https://emilechoghi.com/)",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/echoghi/ebc-scripts/issues"
-  },
-  "files": [
-    "dist",
-    "README.md"
-  ],
-  "homepage": "https://github.com/echoghi/ebc-scripts#readme",
-  "devDependencies": {
-    "@babel/core": "7.7.7",
-    "@babel/preset-env": "7.7.7",
-    "babel-jest": "24.9.0",
-    "babel-loader": "8.0.6",
-    "eslint": "6.8.0",
-    "eslint-config-prettier": "6.7.0",
-    "eslint-plugin-prettier": "3.1.2",
-    "husky": "3.1.0",
-    "jest": "24.9.0",
-    "prettier": "1.19.1",
-    "semantic-release": "^15.14.0",
-    "webpack": "4.41.4",
-    "webpack-cli": "3.3.10"
-  },
-  "browserslist": [
-    "defaults",
-    "> 5%"
-  ],
-  "husky": {
-    "hooks": {
-      "pre-commit": "prettier --write \"src/index.js\" && npm run lint"
-    }
-  },
-  "dependencies": {}
+    "name": "ebc-scripts",
+    "version": "0.1.0",
+    "description": "random helper functions",
+    "main": "dist/index.js",
+    "scripts": {
+        "lint": "eslint src/*.js",
+        "test": "jest --no-cache",
+        "test:watch": "jest --watch --no-cache",
+        "report": "jest --coverage",
+        "build": "webpack",
+        "release": "semantic-release pre && npm publish && semantic-release post"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/echoghi/ebc-scripts.git"
+    },
+    "author": "Emile Choghi <emchoghi@gmail.com> (https://emilechoghi.com/)",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/echoghi/ebc-scripts/issues"
+    },
+    "files": [
+        "dist",
+        "README.md"
+    ],
+    "homepage": "https://github.com/echoghi/ebc-scripts#readme",
+    "devDependencies": {
+        "@babel/core": "7.7.7",
+        "@babel/preset-env": "7.7.7",
+        "babel-jest": "25.1.0",
+        "babel-loader": "8.0.6",
+        "eslint": "6.8.0",
+        "eslint-config-prettier": "6.7.0",
+        "eslint-plugin-prettier": "3.1.2",
+        "husky": "3.1.0",
+        "jest": "25.1.0",
+        "prettier": "1.19.1",
+        "semantic-release": "^15.14.0",
+        "webpack": "4.41.4",
+        "webpack-cli": "3.3.10"
+    },
+    "browserslist": [
+        "defaults",
+        "> 5%"
+    ],
+    "husky": {
+        "hooks": {
+            "pre-commit": "prettier --write \"src/index.js\" && npm run lint"
+        }
+    },
+    "jest": {
+        "coverageDirectory": "coverage",
+        "moduleNameMapper": {
+            "lib": "<rootDir>/src/index"
+        },
+        "transformIgnorePatterns": [
+            "<rootDir>/node_modules/"
+        ]
+    },
+    "dependencies": {}
 }
