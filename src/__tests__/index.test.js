@@ -1,5 +1,10 @@
-import { sum } from 'lib';
+import { removeDuplicateNumbers } from 'lib';
 
-test('adds 1 + 2 to equal 3', () => {
-    expect(sum(1, 2)).toBe(3);
+describe('removeDuplicateNumbers()', () => {
+    test('removes dupes', () => {
+        const dupes = [1, 2, 2, 2, 3, 3, 4, 5, 6, 7, 7, 7, 7];
+        const result = [1, 2, 3, 4, 5, 6, 7];
+
+        expect(removeDuplicateNumbers(dupes)).toEqual(result);
+    });
 });
