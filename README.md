@@ -1,2 +1,2 @@
 # ebc-scripts
-random helper functions
+A collection of random helper functions and leetcode solutions.
