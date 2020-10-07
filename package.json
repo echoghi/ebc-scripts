@@ -1,16 +1,13 @@
 {
     "name": "ebc-scripts",
     "version": "0.1.1",
-    "description": "hooks and random helper functions",
+    "description": "practice algorithms",
     "main": "dist/index.js",
     "scripts": {
         "lint": "eslint src/*.js",
-        "test": "jest --no-cache",
-        "test:watch": "jest --watch --no-cache",
         "report": "jest --coverage",
         "clean": "rimraf *js",
-        "build": "yarn clean && cross-env NODE_ENV=production  babel ./src --out-dir .",
-        "deploy": "np"
+        "build": "yarn clean && cross-env NODE_ENV=production  babel ./src --out-dir ."
     },
     "repository": {
         "type": "git",
@@ -29,33 +26,14 @@
     "devDependencies": {
         "@babel/cli": "7.10.0",
         "@babel/core": "7.7.7",
-        "@babel/plugin-proposal-class-properties": "7.8.3",
         "@babel/plugin-proposal-object-rest-spread": "7.10.0",
         "@babel/preset-env": "7.7.7",
-        "babel-jest": "25.1.0",
         "cross-env": "7.0.2",
         "eslint": "6.8.0",
         "eslint-config-prettier": "6.7.0",
         "eslint-plugin-prettier": "3.1.2",
-        "husky": "3.1.0",
-        "jest": "25.1.0",
         "prettier": "1.19.1",
         "rimraf": "3.0.2"
-    },
-    "husky": {
-        "hooks": {
-            "pre-commit": "prettier --write \"src/index.js\" && npm run lint"
-        }
-    },
-    "jest": {
-        "coverageDirectory": "coverage",
-        "testRegex": "test.js$",
-        "moduleNameMapper": {
-            "lib": "<rootDir>/src/index"
-        },
-        "transformIgnorePatterns": [
-            "<rootDir>/node_modules/"
-        ]
     },
     "prettier": {
         "trailingComma": "none",

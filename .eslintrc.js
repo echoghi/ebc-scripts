@@ -18,8 +18,7 @@ module.exports = {
         'comma-dangle': ['error', 'never'],
         eqeqeq: ['error', 'always'],
         'no-multiple-empty-lines': [2, { max: 1 }],
-        'no-multi-spaces': [2],
-
+        'no-multi-spaces': [2]
     },
     parserOptions: {
         ecmaVersion: 2018,

@@ -1,2 +1,3 @@
 # ebc-scripts
-A collection of random helper functions and leetcode solutions.
+
+A collection of algorithm practice functions
